@@ -5,22 +5,11 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $user->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List User'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="user form content">
+    <div class="container">
+        <div class="form-add ">
             <?= $this->Form->create($user) ?>
             <fieldset>
-                <legend><?= __('Edit User') ?></legend>
+                <legend><?= __('Editar Usuário') ?></legend>
                 <?php
                     echo $this->Form->control('UserName');
                     echo $this->Form->control('UserUF');
@@ -29,8 +18,12 @@
                     echo $this->Form->control('UserNumber');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+            <div class="buttons-form">
+                <?= $this->Html->link(__('Voltar'), ['action' => 'index'], ['class' => 'btn btn-primary p-3 form-button']) ?>
+                <?= $this->Form->button(__('Confirmar'), ['class' => 'btn btn-success p-3 form-button']) ?>
+                <?= $this->Form->end() ?>
+
+            </div>
         </div>
     </div>
 </div>

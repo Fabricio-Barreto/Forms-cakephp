@@ -5,13 +5,14 @@ body {
 
 .containerHeader {
 	width: 94%;
-	margin: 0 auto;
+	margin: -10px auto;
+
 }
 
 .cabecalhoPrincipal {
 	background-color: #FFF;
-	padding: 3rem 0;
-    margin-bottom: 5rem;
+	padding: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .cabecalhoPrincipal-titulo {
@@ -98,6 +99,75 @@ button:hover {
 	color: #FFF;
 	background-color: #9799A6;
 }
+
+.texto-th {
+	font-weight: bold;
+}
+
+.texto-th a {
+	text-decoration: none;
+	color: crimson;
+}
+
+.texto-td {
+	font-weight: bold;
+}
+
+/* Paginator */
+.paginator {
+    text-align: right;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+.pagination li {
+    margin: 0 0.5rem;
+}
+.prev.disabled a,
+.next.disabled a {
+    cursor: not-allowed;
+    color: #606c76;
+}
+.asc:after {
+    content: " \2193";
+}
+.desc:after {
+    content: " \2191";
+}
+
+.form-add {
+	max-width: 70%;
+	margin-top: 1rem;
+	align-items: center;
+}
+
+.form-add input {
+	width: 74%;
+}
+
+.form-add label {
+	width: 20%;
+
+}
+
+.form-add .form-button {
+	max-width: 150px;
+	max-height: 60px;
+	width: 100%;
+	height: 100%;
+}
+
+.form-add .buttons-form {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+
 
 @media(min-width: 769px) {
 

@@ -5,27 +5,25 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List User'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="user form content">
+    <div class="container">
+        <div class="form-add ">
             <?= $this->Form->create($user) ?>
-            <fieldset>
-                <legend><?= __('Add User') ?></legend>
+            <fieldset >
+                <legend><?= __('Adicionar Usuário') ?></legend>
                 <?php
-                    echo $this->Form->control('UserName');
-                    echo $this->Form->control('UserUF');
-                    echo $this->Form->control('UserCity');
-                    echo $this->Form->control('UserCPF');
-                    echo $this->Form->control('UserNumber');
+                    echo $this->Form->control('Nome');
+                    echo $this->Form->control('UF');
+                    echo $this->Form->control('Cidade');
+                    echo $this->Form->control('CPF');
+                    echo $this->Form->control('Número');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+            <div class="buttons-form">
+                <?= $this->Html->link(__('Voltar'), ['action' => 'index'], ['class' => 'btn btn-primary p-3 form-button']) ?>
+                <?= $this->Form->button(__('Confirmar'), ['class' => 'btn btn-success p-3 form-button']) ?>
+                <?= $this->Form->end() ?>
+
+            </div>
         </div>
     </div>
 </div>

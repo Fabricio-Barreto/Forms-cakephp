@@ -5,44 +5,38 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List User'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="user view content">
-            <h3><?= h($user->id) ?></h3>
-            <table>
+    <div class="container">
+        <div class="">
+            <h3 class="mb-3"><?= h($user->UserName) ?></h3>
+            <table class="table table-striped">
                 <tr>
-                    <th><?= __('UserName') ?></th>
-                    <td><?= h($user->UserName) ?></td>
+                    <th class="text-center texto-th"><?= __('Nome') ?></th>
+                    <td class="text-center texto-td"><?= h($user->UserName) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('UserUF') ?></th>
-                    <td><?= h($user->UserUF) ?></td>
+                    <th class="text-center texto-th"><?= __('UF') ?></th>
+                    <td class="text-center texto-td"><?= h($user->UserUF) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('UserCity') ?></th>
-                    <td><?= h($user->UserCity) ?></td>
+                    <th class="text-center texto-th"><?= __('Cidade') ?></th>
+                    <td class="text-center texto-td"><?= h($user->UserCity) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('UserCPF') ?></th>
-                    <td><?= h($user->UserCPF) ?></td>
+                    <th class="text-center texto-th"><?= __('CPF') ?></th>
+                    <td class="text-center texto-td"><?= h($user->UserCPF) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('UserNumber') ?></th>
-                    <td><?= h($user->UserNumber) ?></td>
+                    <th class="text-center texto-th"><?= __('Numero') ?></th>
+                    <td class="text-center texto-td"><?= h($user->UserNumber) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($user->id) ?></td>
+                    <th class="text-center texto-th"><?= __('Id') ?></th>
+                    <td class="text-center texto-td"><?= $this->Number->format($user->id) ?></td>
                 </tr>
             </table>
+            <div class="buttons-form form-add mt-5 button-view">
+                <?= $this->Html->link(__('Voltar'), ['action' => 'index'], ['class' => 'btn btn-primary p-3 form-button']) ?>
+            </div>
         </div>
     </div>
 </div>

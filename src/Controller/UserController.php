@@ -95,7 +95,7 @@ class UserController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->User->get($id);
         if ($this->User->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
+            $this->Flash->success(__('O usuário foi deletado.'));
         } else {
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }

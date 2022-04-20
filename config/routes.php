@@ -58,7 +58,7 @@ return static function (RouteBuilder $routes) {
         $builder->connect('/user/add', ['controller' => 'User', 'action' => 'add']);
         $builder->connect('/user/view', ['controller' => 'User', 'action' => 'view']);
         $builder->connect('/user/edit', ['controller' => 'User', 'action' => 'edit']);
-        $builder->connect('/user/*', ['controller' => 'User', 'action' => 'index']);
+        $builder->connect('/user/deletar', ['controller' => 'User', 'action' => 'delete']);
 
         /*
          * Connect catchall routes for all controllers.

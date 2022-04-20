@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Formulário App';
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,14 +22,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        <?= $cakeDescription ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'bootstrap.mim.css', 'style.css']) ?>
+    <?= $this->Html->css(['reset','bootstrap.css', 'style.css']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -39,10 +35,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <header class="cabecalhoPrincipal">
 		<div class="containerHeader">
 
-			<nav class="cabecalhoPrincipal-nav">
-				<a class="cabecalhoPrincipal-nav-link" href="/">Incio</a>
-				<a class="cabecalhoPrincipal-nav-link" href="/about">Sobre</a>
-				<a class="cabecalhoPrincipal-nav-link" href="/help">Contato</a>
+			<nav class="cabecalhoPrincipal-nav float-end">
+                <?= $this->Html->link(__('Inicio'), ['action' => 'index'], ['class' => 'cabecalhoPrincipal-nav-link']) ?> 
+                <?= $this->Html->link(__('Sobre'), ['action' => 'index'], ['class' => 'cabecalhoPrincipal-nav-link']) ?> 
+                <?= $this->Html->link(__('Contato'), ['action' => 'index'], ['class' => 'cabecalhoPrincipal-nav-link']) ?> 
+
 			</nav>
 		</div>
 
