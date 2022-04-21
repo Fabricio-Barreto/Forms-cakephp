@@ -8,14 +8,14 @@
     <div class="container">
         <div class="form-add ">
             <?= $this->Form->create($user) ?>
-            <fieldset >
+            <fieldset>
                 <legend><?= __('Adicionar Usuário') ?></legend>
                 <?php
-                    echo $this->Form->control('Nome');
-                    echo $this->Form->control('UF');
-                    echo $this->Form->control('Cidade');
-                    echo $this->Form->control('CPF');
-                    echo $this->Form->control('Número');
+                    echo $this->Form->control('UserName', ['label' => 'Nome']);
+                    echo $this->Form->control('UserUF', ['label' => 'UF']);
+                    echo $this->Form->control('UserCity', ['label' => 'Cidade']);
+                    echo $this->Form->control('UserCPF', ['type' => 'number'], ['label' => 'CPF']);
+                    echo $this->Form->control('UserNumber', ['type' => 'number'], ['label' => 'Número']);
                 ?>
             </fieldset>
             <div class="buttons-form">

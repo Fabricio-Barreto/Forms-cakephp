@@ -11,11 +11,11 @@
             <fieldset>
                 <legend><?= __('Editar Usuário') ?></legend>
                 <?php
-                    echo $this->Form->control('UserName');
-                    echo $this->Form->control('UserUF');
-                    echo $this->Form->control('UserCity');
-                    echo $this->Form->control('UserCPF');
-                    echo $this->Form->control('UserNumber');
+                    echo $this->Form->control('UserName', ['label' => 'Nome']);
+                    echo $this->Form->control('UserUF', ['label' => 'UF']);
+                    echo $this->Form->control('UserCity', ['label' => 'Cidade']);
+                    echo $this->Form->control('UserCPF', ['type' => 'number'], ['label' => 'CPF']);
+                    echo $this->Form->control('UserNumber', ['type' => 'number'], ['label' => 'Número']);
                 ?>
             </fieldset>
             <div class="buttons-form">

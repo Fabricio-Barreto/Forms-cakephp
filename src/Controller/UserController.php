@@ -18,6 +18,10 @@ class UserController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'limit' => '7'
+        ];
+
         $user = $this->paginate($this->User);
 
         $this->set(compact('user'));
@@ -49,6 +53,7 @@ class UserController extends AppController
         $user = $this->User->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->User->patchEntity($user, $this->request->getData());
+            echo($user);
             if ($this->User->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 

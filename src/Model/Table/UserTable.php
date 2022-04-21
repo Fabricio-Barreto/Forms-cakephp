@@ -53,27 +53,27 @@ class UserTable extends Table
         $validator
             ->scalar('UserName')
             ->maxLength('UserName', 255)
-            ->allowEmptyString('UserName');
+            ->notEmptyString('UserName');
 
         $validator
             ->scalar('UserUF')
             ->maxLength('UserUF', 255)
-            ->allowEmptyString('UserUF');
+            ->notEmptyString('UserUF');
 
         $validator
             ->scalar('UserCity')
             ->maxLength('UserCity', 255)
-            ->allowEmptyString('UserCity');
+            ->notEmptyString('UserCity');
 
         $validator
             ->scalar('UserCPF')
             ->maxLength('UserCPF', 255)
-            ->allowEmptyString('UserCPF');
+            ->notEmptyString('UserCPF');
 
         $validator
             ->scalar('UserNumber')
             ->maxLength('UserNumber', 255)
-            ->allowEmptyString('UserNumber');
+            ->notEmptyString('UserNumber');
 
         return $validator;
     }
